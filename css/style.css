@@ -408,9 +408,6 @@ img {
   display: flex;
   align-items: baseline;
 }
-.contacts {
-  margin-right: 70px;
-}
 .join-us-tittle {
   font-weight: bold;
   font-size: 14px;
@@ -419,9 +416,7 @@ img {
   color: var(--white-link-color);
   margin-bottom: 20px;
 }
-/* .join-us {
-  margin-right: 90px;
-} */
+
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-link-color);
@@ -469,9 +464,6 @@ img {
 .subscribe-input:hover {
   border-color: var(--accent-color);
 }
-.subscribe {
-  margin-left: auto;
-}
 .subscribe-icon {
   fill: var(--white-link-color);
   margin-left: 10px;
@@ -483,6 +475,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer-cont-item:not(:last-child) {
+  margin-right: 70px;
+}
+.footer-cont-item:last-child {
+  margin-left: auto;
 }
 /* 
 ------------------------------------------
@@ -655,9 +653,7 @@ img {
   position: relative;
   transition: border-color var(--animation);
 }
-.modal-icon-wrap:hover .form-input {
-  border-color: var(--accent-color);
-}
+
 .modal-icon-wrap:hover .modal-icon {
   fill: var(--accent-color);
 }
@@ -682,6 +678,8 @@ img {
   outline: none;
   transition: border-color var(--animation);
 }
+
+.form-input:hover,
 .form-input:focus {
   border-color: var(--accent-color);
 }
@@ -693,15 +691,18 @@ img {
   resize: none;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
   font-size: 13px;
   padding-left: 14px;
-  margin-bottom: 10px;
+
   /* overflow: auto; */
 }
 .textarea::placeholder {
   color: var(--placeholder-color);
 }
+.form-text-area {
+  margin-bottom: 20px;
+}
+
 .policy {
   margin-bottom: 30px;
 }
