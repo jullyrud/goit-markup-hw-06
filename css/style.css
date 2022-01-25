@@ -184,11 +184,12 @@ img {
   cursor: pointer;
   border-radius: 4px;
   border: none;
-  transition: background-color var(--animation);
+  transition: background-color var(--animation), box-shadow var(--animation);
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------------------------------MAIN */
@@ -459,9 +460,11 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   width: 358px;
+  outline: none;
   transition: border-color var(--animation);
 }
-.subscribe-input:hover {
+.subscribe-input:hover,
+.subscribe-input:focus {
   border-color: var(--accent-color);
 }
 .subscribe-icon {
@@ -654,9 +657,6 @@ img {
   transition: border-color var(--animation);
 }
 
-.modal-icon-wrap:hover .modal-icon {
-  fill: var(--accent-color);
-}
 .form-field {
   /* outline: 1px solid blue; */
   display: flex;
@@ -683,7 +683,8 @@ img {
 .form-input:focus {
   border-color: var(--accent-color);
 }
-.form-input:focus + .modal-icon {
+.form-input:focus + .modal-icon,
+.form-input:hover + .modal-icon {
   fill: var(--accent-color);
 }
 
@@ -724,11 +725,12 @@ img {
   cursor: pointer;
 }
 .policy-check-icon:checked + .label-policy::before {
-  border: none;
+  border: 2px solid var(--accent-color);
   background-image: url(../img/icon-check.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: var(--accent-color);
 }
 .policy-check-icon:focus + .label-policy::before,
 .policy-check-icon:hover + .label-policy::before {
@@ -741,11 +743,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transition: box-shadow var(--animation);
 }
-.modal-btn:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
